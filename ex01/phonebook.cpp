@@ -7,7 +7,6 @@ void	PhoneBook::addContact()
 	contactCount++;
 }
 
-
 void	PhoneBook::searchContact()
 {
 	bool found = false;
@@ -28,15 +27,14 @@ void	PhoneBook::searchContact()
 		return ;
 	}
 	std::cout << "Entrez un index (0-7) : ";
+	std::string line;
+	std::getline(std::cin, line);
+	std::stringstream ss(line);
 	int index;
-	std::cin >> index ;
-	// std::getline(std::cin, index);
-	if (std::cin.fail() || index < 0 || index >= 8 || contacts[index].isEmpty())
+	if (!(ss >> index) || !(ss.eof()) || index < 0 || index >= 8 || contacts[index].isEmpty())
 	{
-		std::cin.clear();
-		std::cin.ignore(10000, '\n');
-		std::cout << "Index invalid or contact empty !" << std::endl;
-		return ;
+		std::cout << "Index invalide ou contact vide !" << std::endl;
+		return;
 	}
 	contacts[index].displayContact();
 }

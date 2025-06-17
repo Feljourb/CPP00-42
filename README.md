@@ -26,9 +26,6 @@ Programme qui affiche ses arguments en majuscules. Introduction à `main`, `argc
 ### 📁 ex01 – PhoneBook
 Carnet d’adresses minimal en ligne de commande. Utilisation de classes, d’un tableau fixe d’objets, d’entrées utilisateurs avec `std::getline`, etc.
 
-### 📁 ex02 – Fixed Point
-Création d'une classe `Fixed` pour manipuler des nombres à virgule fixe. Introduction aux constructeurs, destructeurs, fonctions membres, opérateur d’affichage (`<<`), et gestion de la précision.
-
 ---
 
 ## 🧠 Concepts clés
